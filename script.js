@@ -26,7 +26,7 @@ document.getElementById("app").innerHTML = `<h1 class="app-title">Pets(${petsDat
 ${petsData.map(function(pet){
     return `
 <div class="animal">
-
+<img src="${pet.photo}">
 </div>
 `
 }).join('')}
