@@ -23,8 +23,12 @@ var petsData = [
 ];
 
 document.getElementById("app").innerHTML = `<h1 class="app-title">Pets(${petsData.length} results)</h1>
-${petsData.map(function(){
-    return 'Hello'
+${petsData.map(function(pet){
+    return `
+<div class="animal">
+
+</div>
+`
 }).join('')}
 <p class="footer"> These ${petsData.length} pets were added recently. Check back soon for updates. </p> 
 
