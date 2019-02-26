@@ -43,12 +43,12 @@ function foods(foods){
     return `
 <h4> Favorite Foods </h4> 
 <ul class= "foods-list"> 
-${foods}
+${foods.map().join('')}
 </ul> 
 
 `
 }
-
+//maps() generates a new array it also takes a function 
 function petTemplate(pet){
     return `
 <div class="animal">
