@@ -9,6 +9,7 @@ var petsData = [
   {
     name: "Barksalot",
     species: "Dog",
+      favFoods: ["bones", "chicken", "Beef"],
     birthYear: 2008,
     photo: "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
   },
