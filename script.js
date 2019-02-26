@@ -27,7 +27,7 @@ ${petsData.map(function(pet){
     return `
 <div class="animal">
 <img class="pet-photo" src="${pet.photo}">
-<h2> ${pet.name}</h2>
+<h2> ${pet.name}<span class="species">(${pet.species})</span></h2>
 </div>
 `
 }).join('')}
