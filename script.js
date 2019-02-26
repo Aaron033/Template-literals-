@@ -43,12 +43,13 @@ function foods(foods){
     return `
 <h4> Favorite Foods </h4> 
 <ul class= "foods-list"> 
-${foods.map((food)=>`<li> ${food}</li>`
+${foods.map(food =>`<li> ${food}</li>`
 ).join('')}
 </ul> 
 
 `
 }
+//ES6 functionality added 
 //maps() generates a new array it also takes a function 
 function petTemplate(pet){
     return `
