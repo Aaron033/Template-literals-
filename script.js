@@ -24,7 +24,14 @@ var petsData = [
 //The name in the argument does not matter, I just put the birthYear parameters because it will make more sense.
 function age(birthYear){
     //birthYear  is relationated with the pet.birthYear
-    return new Date().getFullYear()- birthYear;
+    //
+  let calculatedAge = new Date().getFullYear()- birthYear;
+    if(calculatedAge < 1){
+        return calculatedAge = "baby"; 
+    
+    }else{
+        return calculatedAge + " " + "Years old"
+    }
     
     //new Date().getFullYear(); native to javascript 
 }
