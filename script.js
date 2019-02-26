@@ -22,7 +22,7 @@ var petsData = [
     }
 ];
 
-function petTemplate(){
+function petTemplate(pet){
     return `
 <div class="animal">
 <img class="pet-photo" src="${pet.photo}">
@@ -32,8 +32,9 @@ function petTemplate(){
 }
 
 
-document.getElementById("app").innerHTML = `<h1 class="app-title">Pets(${petsData.length} results)</h1>
+document.getElementById("app").innerHTML = `
+<h1 class="app-title">Pets (${petsData.length} results)</h1>
 ${petsData.map(petTemplate).join('')}
 
-<p class="footer"> These ${petsData.length} pets were added recently. Check back soon for updates. </p> 
+<p class="footer">These ${petsData.length} pets were added recently. Check back soon for updates. </p> 
 `
