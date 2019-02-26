@@ -22,15 +22,18 @@ var petsData = [
     }
 ];
 
-document.getElementById("app").innerHTML = `<h1 class="app-title">Pets(${petsData.length} results)</h1>
-${petsData.map(function(pet){
+function petTemplate(){
     return `
 <div class="animal">
 <img class="pet-photo" src="${pet.photo}">
-<h2> ${pet.name}<span class="species">(${pet.species})</span></h2>
+<h2 class ="pet-name"> ${pet.name}<span class="species">(${pet.species})</span></h2>
 </div>
 `
-}).join('')}
-<p class="footer"> These ${petsData.length} pets were added recently. Check back soon for updates. </p> 
+}
 
+
+document.getElementById("app").innerHTML = `<h1 class="app-title">Pets(${petsData.length} results)</h1>
+${petsData.map(petTemplate).join('')}
+
+<p class="footer"> These ${petsData.length} pets were added recently. Check back soon for updates. </p> 
 `
