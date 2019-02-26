@@ -38,11 +38,12 @@ function age(birthYear){
     
     //new Date().getFullYear(); native to javascript 
 }
-function foods(){
+//The argument name in foods does not matter 
+function foods(foods){
     return `
 <h4> Favorite Foods </h4> 
 <ul class= "foods-list"> 
-<li> Food one</li> 
+${foods}
 </ul> 
 
 `
@@ -54,7 +55,7 @@ function petTemplate(pet){
 <img class="pet-photo" src="${pet.photo}">
 <h2 class ="pet-name"> ${pet.name}<span class="species">(${pet.species})</span></h2>
 <p><strong>Age: </strong>${age(pet.birthYear)} </p>
-${pet.favFoods ? foods()  : ''}
+${pet.favFoods ? foods(pet.favFoods)  : ''}
 
 </div>
 
