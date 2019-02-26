@@ -29,11 +29,23 @@ function age(birthYear){
     if(calculatedAge < 1){
         return calculatedAge = "baby"; 
     
-    }else{
-        return calculatedAge + " " + "Years old"
+    }else if(calculatedAge == 1){
+        return calculatedAge + "year old";
+    }
+    else{
+        return calculatedAge + " " + "years old";
     }
     
     //new Date().getFullYear(); native to javascript 
+}
+function foods(){
+    return `
+<h4> Favorite Foods </h4> 
+<ul> 
+<li> Food one</li> 
+</ul> 
+
+`
 }
 
 function petTemplate(pet){
@@ -42,6 +54,7 @@ function petTemplate(pet){
 <img class="pet-photo" src="${pet.photo}">
 <h2 class ="pet-name"> ${pet.name}<span class="species">(${pet.species})</span></h2>
 <p><strong>Age: </strong>${age(pet.birthYear)} </p>
+${foods()}
 </div>
 
 `
